@@ -12,15 +12,25 @@ int main()
 		scanf("%d", &input);
 	}
 	else {
-		if (input = 1)
+		if (input == 1)
 			printf("%d", i);
-		else if (input = 2)
+		else if (input == 2)
 			printf("%d %d", i, j);
-		else if (input = 3)
+		else if (input == 3)
 			printf("%d %d %d", i, j, i + j);
 		else
 		{
-			while(input>=4)
+			printf("%d ", i);
+			printf("%d ", j);
+			q = i + j;
+			printf("%d ", q);
+			while (input >= 4)
+			{
+				i = j, j = q;
+				q = i + j;
+				printf("%d ", q);
+				input--;
+			}
 		}
 	}
 }
